@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ver-ID API Documentation</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<aside><h2>Classes</h2><ul><li><a href="com.appliedrec.ver_id.ui.VerIDFragment.html">VerIDFragment</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDTheme.html">VerIDTheme</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDTheme.ColourScheme.html">VerIDTheme.ColourScheme</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDActivity.html">VerIDActivity</a></li><li><a href="com.appliedrec.ver_id.VerID.html">VerID</a></li><li><a href="com.appliedrec.ver_id.util.FaceUtil.html">FaceUtil</a></li><li><a href="com.appliedrec.ver_id.VerIDLivenessDetectionIntent.html">VerIDLivenessDetectionIntent</a></li><li><a href="com.appliedrec.ver_id.VerIDRegistrationIntent.html">VerIDRegistrationIntent</a></li><li><a href="com.appliedrec.ver_id.VerIDSessionIntent.html">VerIDSessionIntent</a></li><li><span class="deprecated">LogEntry</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.model.VerIDFace.html">VerIDFace</a></li><li><span class="deprecated">RecognitionFace</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.model.VerIDUser.html">VerIDUser</a></li><li><a href="com.appliedrec.ver_id.UserManager.html">UserManager</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDUserPictureUriLoader.html">VerIDUserPictureUriLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDUsersLoader.html">VerIDUsersLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDRegistrationLoader.html">VerIDRegistrationLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDLoader.html">VerIDLoader</a></li><li><a href="com.appliedrec.ver_id.VerIDAuthenticationIntent.html">VerIDAuthenticationIntent</a></li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.html">VerIDFaceDetectionService</a></li><li><a href="com.appliedrec.ver_id.services.VerIDTAFaceDetectionService.html">VerIDTAFaceDetectionService</a></li><li><a href="com.appliedrec.ver_id.session.VerIDLivenessDetectionSessionSettings.html">VerIDLivenessDetectionSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDAuthenticationSessionSettings.html">VerIDAuthenticationSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionResult.html">VerIDSessionResult</a></li><li><a href="com.appliedrec.ver_id.session.VerIDRegistrationSessionSettings.html">VerIDRegistrationSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionSettings.html">VerIDSessionSettings</a></li></ul><h2>Interfaces</h2><ul><li><a href="com.appliedrec.ver_id.ui.VerIDFragmentDelegate.html">VerIDFragmentDelegate</a></li><li><span class="deprecated">VerID.LogSubmitterListener</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.VerID.LoadCallback.html">VerID.LoadCallback</a></li><li><span class="deprecated">ILogger</span> (deprecated)</li><li><span class="deprecated">ILogSubmitter</span> (deprecated)</li></ul><h2>Enums</h2><ul><li><a href="com.appliedrec.ver_id.VerID.Bearing.html">VerID.Bearing</a></li><li><a href="com.appliedrec.ver_id.VerID.LivenessDetection.html">VerID.LivenessDetection</a></li><li><a href="com.appliedrec.ver_id.VerID.AntiSpoofingMethod.html">VerID.AntiSpoofingMethod</a></li><li><a href="com.appliedrec.ver_id.VerID.SecurityLevel.html">VerID.SecurityLevel</a></li><li><span class="deprecated">ILogger.EventType</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.Axis.html">VerIDFaceDetectionService.Axis</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionResult.Outcome.html">VerIDSessionResult.Outcome</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionSettings.CameraLensFacing.html">VerIDSessionSettings.CameraLensFacing</a></li></ul></aside>
+</body>
+</html>
+<h1>CameraViewWrapper</h1>
+<h4>Package com.appliedrec.ver_id.ui</h4>
+<code>public class  CameraViewWrapper</code>
+<ul class="ancestry"><li>com.appliedrec.ver_id.ui.CameraViewWrapper
+<ul class="ancestry"><li>java.lang.Object
+</li></ul>
+</li></ul>
+<h2>Implements</h2>
+<ul class="ancestry">
+<li>android.view.TextureView.SurfaceTextureListener</li>
+<li>android.view.SurfaceHolder.Callback</li>
+</ul>
+<section><h2>Constructor</h2><dl>
+<dt><h3><a name="CameraViewWrapper(Context, VerIDSessionSettings)">CameraViewWrapper</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public CameraViewWrapper(Context, VerIDSessionSettings)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>context <code>android.content.Context</code></dt>
+<dt>settings <code>com.appliedrec.ver_id.session.VerIDSessionSettings</code></dt>
+</dl>
+
+</dd>
+</dl></section>
+<section><h2>Methods</h2><dl>
+<dt><h3><a name="getOutputClass()">getOutputClass</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public getOutputClass()</code>
+<h4>Returns</h4>
+<dl>
+<dt><code>java.lang.Class</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="setTransform(Matrix)">setTransform</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public setTransform(Matrix)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>matrix <code>android.graphics.Matrix</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="setCameraViewCallback(CameraViewWrapper.CameraViewCallback)">setCameraViewCallback</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public setCameraViewCallback(CameraViewWrapper.CameraViewCallback)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>callback <code><a href="com.appliedrec.ver_id.ui.CameraViewWrapper.CameraViewCallback.html">com.appliedrec.ver_id.ui.CameraViewWrapper.CameraViewCallback</a></code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="getId()">getId</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public getId()</code>
+<h4>Returns</h4>
+<dl>
+<dt><code>int</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="getView()">getView</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public getView()</code>
+<h4>Returns</h4>
+<dl>
+<dt><code>android.view.View</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="getSurface()">getSurface</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public getSurface()</code>
+<h4>Returns</h4>
+<dl>
+<dt><code>android.view.Surface</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="setFixedPreviewSize(int, int)">setFixedPreviewSize</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public setFixedPreviewSize(int, int)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>width <code>int</code></dt>
+<dt>height <code>int</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onSurfaceTextureAvailable(SurfaceTexture, int, int)">onSurfaceTextureAvailable</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onSurfaceTextureAvailable(SurfaceTexture, int, int)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>surfaceTexture <code>android.graphics.SurfaceTexture</code></dt>
+<dt>i <code>int</code></dt>
+<dt>i1 <code>int</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onSurfaceTextureSizeChanged(SurfaceTexture, int, int)">onSurfaceTextureSizeChanged</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onSurfaceTextureSizeChanged(SurfaceTexture, int, int)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>surfaceTexture <code>android.graphics.SurfaceTexture</code></dt>
+<dt>i <code>int</code></dt>
+<dt>i1 <code>int</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onSurfaceTextureDestroyed(SurfaceTexture)">onSurfaceTextureDestroyed</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onSurfaceTextureDestroyed(SurfaceTexture)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>surfaceTexture <code>android.graphics.SurfaceTexture</code></dt>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>boolean</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onSurfaceTextureUpdated(SurfaceTexture)">onSurfaceTextureUpdated</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onSurfaceTextureUpdated(SurfaceTexture)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>surfaceTexture <code>android.graphics.SurfaceTexture</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="surfaceCreated(SurfaceHolder)">surfaceCreated</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public surfaceCreated(SurfaceHolder)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>surfaceHolder <code>android.view.SurfaceHolder</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="surfaceChanged(SurfaceHolder, int, int, int)">surfaceChanged</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public surfaceChanged(SurfaceHolder, int, int, int)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>surfaceHolder <code>android.view.SurfaceHolder</code></dt>
+<dt>i <code>int</code></dt>
+<dt>i1 <code>int</code></dt>
+<dt>i2 <code>int</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="surfaceDestroyed(SurfaceHolder)">surfaceDestroyed</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public surfaceDestroyed(SurfaceHolder)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>surfaceHolder <code>android.view.SurfaceHolder</code></dt>
+</dl>
+
+</dd>
+</dl></section>

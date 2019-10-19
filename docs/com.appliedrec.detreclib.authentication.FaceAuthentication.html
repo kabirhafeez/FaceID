@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ver-ID API Documentation</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<aside><h2>Classes</h2><ul><li><a href="com.appliedrec.ver_id.ui.VerIDFragment.html">VerIDFragment</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDTheme.html">VerIDTheme</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDTheme.ColourScheme.html">VerIDTheme.ColourScheme</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDActivity.html">VerIDActivity</a></li><li><a href="com.appliedrec.ver_id.VerID.html">VerID</a></li><li><a href="com.appliedrec.ver_id.util.FaceUtil.html">FaceUtil</a></li><li><a href="com.appliedrec.ver_id.VerIDLivenessDetectionIntent.html">VerIDLivenessDetectionIntent</a></li><li><a href="com.appliedrec.ver_id.VerIDRegistrationIntent.html">VerIDRegistrationIntent</a></li><li><a href="com.appliedrec.ver_id.VerIDSessionIntent.html">VerIDSessionIntent</a></li><li><span class="deprecated">LogEntry</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.model.VerIDFace.html">VerIDFace</a></li><li><span class="deprecated">RecognitionFace</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.model.VerIDUser.html">VerIDUser</a></li><li><a href="com.appliedrec.ver_id.UserManager.html">UserManager</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDUserPictureUriLoader.html">VerIDUserPictureUriLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDUsersLoader.html">VerIDUsersLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDRegistrationLoader.html">VerIDRegistrationLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDLoader.html">VerIDLoader</a></li><li><a href="com.appliedrec.ver_id.VerIDAuthenticationIntent.html">VerIDAuthenticationIntent</a></li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.html">VerIDFaceDetectionService</a></li><li><a href="com.appliedrec.ver_id.services.VerIDTAFaceDetectionService.html">VerIDTAFaceDetectionService</a></li><li><a href="com.appliedrec.ver_id.session.VerIDLivenessDetectionSessionSettings.html">VerIDLivenessDetectionSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDAuthenticationSessionSettings.html">VerIDAuthenticationSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionResult.html">VerIDSessionResult</a></li><li><a href="com.appliedrec.ver_id.session.VerIDRegistrationSessionSettings.html">VerIDRegistrationSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionSettings.html">VerIDSessionSettings</a></li></ul><h2>Interfaces</h2><ul><li><a href="com.appliedrec.ver_id.ui.VerIDFragmentDelegate.html">VerIDFragmentDelegate</a></li><li><span class="deprecated">VerID.LogSubmitterListener</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.VerID.LoadCallback.html">VerID.LoadCallback</a></li><li><span class="deprecated">ILogger</span> (deprecated)</li><li><span class="deprecated">ILogSubmitter</span> (deprecated)</li></ul><h2>Enums</h2><ul><li><a href="com.appliedrec.ver_id.VerID.Bearing.html">VerID.Bearing</a></li><li><a href="com.appliedrec.ver_id.VerID.LivenessDetection.html">VerID.LivenessDetection</a></li><li><a href="com.appliedrec.ver_id.VerID.AntiSpoofingMethod.html">VerID.AntiSpoofingMethod</a></li><li><a href="com.appliedrec.ver_id.VerID.SecurityLevel.html">VerID.SecurityLevel</a></li><li><span class="deprecated">ILogger.EventType</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.Axis.html">VerIDFaceDetectionService.Axis</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionResult.Outcome.html">VerIDSessionResult.Outcome</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionSettings.CameraLensFacing.html">VerIDSessionSettings.CameraLensFacing</a></li></ul></aside>
+</body>
+</html>
+<h1>FaceAuthentication</h1>
+<h4>Package com.appliedrec.detreclib.authentication</h4>
+<code>public class  FaceAuthentication</code>
+<ul class="ancestry"><li>com.appliedrec.detreclib.authentication.FaceAuthentication
+<ul class="ancestry"><li>com.appliedrec.detreclib.DetRecLib
+<ul class="ancestry"><li>java.lang.Object
+</li></ul>
+</li></ul>
+</li></ul>
+<section><h2>Methods</h2><dl>
+<dt><h3><a name="initialize(Context, URL)">initialize</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static initialize(Context, URL)</code>
+<p>Call this from this class when initializing authentication. This overrides some of the
+ config parameters.
+
+ Application's API secret must be set in the Android manifest's metadata property named com.appliedrec.verid.apiSecret. Otherwise call <a href="com.appliedrec.detreclib.authentication.FaceAuthentication.html#initialize(Context, URL, String, boolean)">initialize(Context, File, String, boolean)</a></p>
+<h4>Parameters</h4>
+<dl>
+<dt>context <code>android.content.Context</code></dt>
+<dd>the context of the calling application</dd>
+<dt>modelsUrl <code>java.net.URL</code></dt>
+<dd>URL from which to load model files or null to look in assets</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.lang.Exception</code></dt>
+<dd>all other issues</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="initialize(Context, URL, String, boolean)">initialize</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static initialize(Context, URL, String, boolean)</code>
+<p>Call this from this class when initializing authentication. This overrides some of the
+ config parameters.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>context <code>android.content.Context</code></dt>
+<dd>the context of the calling application</dd>
+<dt>modelsUrl <code>java.net.URL</code></dt>
+<dd>URL from which to load model files or null to look in assets</dd>
+<dt>apiSecret <code>java.lang.String</code></dt>
+<dd>the application's API secret</dd>
+<dt>clearDatabase <code>boolean</code></dt>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.lang.Exception</code></dt>
+<dd>all other issues</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="startEnrollment(String)">startEnrollment</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static startEnrollment(String)</code>
+<p>Start enrollment process for a new or existing subject. All face
+ data is saved to DB, so it is persistent over many sessions.
+ If a subject already exists, all prior templates are cleared.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectId <code>java.lang.String</code></dt>
+<dd>unique identifier string for a subject. If the subject already
+                  exists, all templates are cleared to restart enrollment.
+                  If null, a newly generated random string is returned.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>java.lang.String</code></dt>
+<dd>a unique identifier for a subject that can be used to add and
+         authenticate faces. If an id was passed as a parameter
+         then it is returned; otherwise, a randomly generated string is returned.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="get64BaseEncodedTemplateForFace(FBFace)">get64BaseEncodedTemplateForFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static get64BaseEncodedTemplateForFace(FBFace)</code>
+<p>Get a 64base encoded string representing the recognition template/signature
+ for the face object. If the face does not exist or does not have a template
+ because it may be unsuitable for recognition, an error is returned.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>face <code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>FBFace object previously obtained from detection call.
+            This object must not have been previously destroyed, otherwise
+            exception will be thrown.
+            Also, this face has to be suitable for recognition, otherwise
+            exception will be thrown.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>java.lang.String</code></dt>
+<dd>a string containing 64base encoded string of floats representing the face template.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="getTemplateForFace(FBFace)">getTemplateForFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static getTemplateForFace(FBFace)</code>
+<p>Get a recognition template/signature for the face object. If the face
+ does not exist or does not have a template because it may be unsuitable
+ for recognition, an error is returned.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>face <code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>FBFace object previously obtained from detection call.
+            This object must not have been previously destroyed, otherwise
+            exception will be thrown.
+            Also, this face has to be suitable for recognition, otherwise
+            exception will be thrown.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>float[]</code></dt>
+<dd>float array representing the face template</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="getBinaryTemplateForFace(FBFace)">getBinaryTemplateForFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static getBinaryTemplateForFace(FBFace)</code>
+<p>Get a data object of bytes representing the serialized recognition template/signature
+ for the face object. If the face does not exist or does not have a template
+ because it may be unsuitable for recognition, an exception is thrown.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>face <code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>FBFace object previously obtained from detection call.
+            This object must not have been previously destroyed, otherwise
+            exception will be thrown.
+            Also, this face has to be suitable for recognition, otherwise
+            exception will be thrown.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>byte[]</code></dt>
+<dd>an array of bytes representing the binary face template.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="createFBFaceFromBinaryTemplate(byte[])">createFBFaceFromBinaryTemplate</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static createFBFaceFromBinaryTemplate(byte[])</code>
+<p>Create a new face object from the serialized recognition template/signature.
+ This always creates a new face, regardless if a duplicate template exists.
+ If you want to first check that face does not exist or fetch an existing
+ face, call getFBFacesFromBinaryTemplate.
+
+ If the serialized template is incorrect or contains errors that cannot be
+ converted to a valid face object, an exception is thrown.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>binaryTemplate <code>byte[]</code></dt>
+<dd>Binary template as byte array that was returned from a previous
+            call to getBinaryTemplateForFace. It may have been
+            forwarded to a server for template centralization, but
+            must be converted exactly as the original data for it to
+            be valid.
+            If data object contains errors, an exception will be thrown.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>an FBFace object representing the face template.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="getFBFacesFromBinaryTemplate(byte[])">getFBFacesFromBinaryTemplate</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static getFBFacesFromBinaryTemplate(byte[])</code>
+<p>Fetches possible exising face objects matching the serialized recognition
+ template/signature. If no matching templates exist, returns an empty
+ array. Otherwise, one or more (since we don't enforce uniqueness) matching
+ faces are returned in array.
+
+ If there are problems, most likely with database, an exception is thrown.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>binaryTemplate <code>byte[]</code></dt>
+<dd>Binary template as byte array that was returned from a previous
+            call to getBinaryTemplateForFace. It may have been
+            forwarded to a server for template centralization. This
+            call uses a hash for lookup and does not enforce integrity
+            of the template - whether it's a valid template.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace[]</code></dt>
+<dd>an array of FBFace objects matching the face template, empty if not found.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="detectFaceInImage(String, boolean, ArrayList<FBFace>)">detectFaceInImage</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static detectFaceInImage(String, boolean, ArrayList<FBFace>)</code>
+<p>Detect faces in an image and return the largest face suitable for recognition (if found). All
+ other faces which are rejected are returned in the rejectedFaces array.
+ All faces (except the one returned) are automatically discarded.
+
+ You must discard the returned face manually, unless it is to be added to subject templates.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>filePath <code>java.lang.String</code></dt>
+<dd>the path to the image file (jpeg)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+<dt>rejectedFaces <code>java.util.ArrayList&lt;FBFace&gt;</code></dt>
+<dd>a reference to an array to load rejected faces - will not contain the returned face.
+                      pass null if not needed</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>a FBFace object containing the largest face suitable for recognition, if one is found;
+         otherwise, null is returned.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="detectFaceInImage(byte[], int, int, int, boolean, ArrayList<FBFace>)">detectFaceInImage</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static detectFaceInImage(byte[], int, int, int, boolean, ArrayList<FBFace>)</code>
+<p>Detect faces in an image and return the largest face suitable for recognition (if found). All
+ other faces which are rejected are returned in the rejectedFaces array.
+ All faces (except the one returned) are automatically discarded.
+
+ You must discard the returned face manually, unless it is to be added to subject templates.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>image <code>byte[]</code></dt>
+<dd>An image object contained in byte array in ARGB format with 8 bits per channel,
+                  most likely taken by camera.</dd>
+<dt>width <code>int</code></dt>
+<dd>The number of pixels for a given row of the image. This translates to 4 times
+                  as many bytes in byte array</dd>
+<dt>height <code>int</code></dt>
+<dd>The number of rows in image.</dd>
+<dt>exifRotation <code>int</code></dt>
+<dd>The exif representation of the image rotation (including mirroring)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+<dt>rejectedFaces <code>java.util.ArrayList&lt;FBFace&gt;</code></dt>
+<dd>a reference to an array to load rejected faces - will not contain the returned face.
+                      pass null if not needed</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>a FBFace object containing the largest face suitable for recognition, if one is found;
+         otherwise, null is returned.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="detectFaceInImageUsingBackgroundProcessing(byte[], int, int, int, boolean, ArrayList<FBFace>)">detectFaceInImageUsingBackgroundProcessing</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static detectFaceInImageUsingBackgroundProcessing(byte[], int, int, int, boolean, ArrayList<FBFace>)</code>
+<p>Detect faces in an image and return the largest face that is potentially suitable for recognition (if found).
+ Potential faces get immediate background processing for template extraction. All
+ other faces which are rejected are returned in the rejectedFaces array.
+ All faces (except the one returned) are automatically discarded.
+
+ You must discard the returned face manually, unless it is to be added to subject templates.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>image <code>byte[]</code></dt>
+<dd>An image object contained in byte array in ARGB format with 8 bits per channel,
+                  most likely taken by camera.</dd>
+<dt>width <code>int</code></dt>
+<dd>The number of pixels for a given row of the image. This translates to 4 times
+                  as many bytes in byte array</dd>
+<dt>height <code>int</code></dt>
+<dd>The number of rows in image.</dd>
+<dt>exifRotation <code>int</code></dt>
+<dd>The exif representation of the image rotation (including mirroring)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+<dt>rejectedFaces <code>java.util.ArrayList&lt;FBFace&gt;</code></dt>
+<dd>a reference to an array to load rejected faces - will not contain the returned face.
+                      pass null if not needed</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>a FBFace object containing the largest face suitable for recognition, if one is found;
+         otherwise, null is returned.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="pollBackgroundProcessingByFaceId(long)">pollBackgroundProcessingByFaceId</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static pollBackgroundProcessingByFaceId(long)</code>
+<p>Poll whether face id is still processing. If finished, an FBFace object will be returned.
+ This object should contain a template, but it may be the case that template extraction
+ did not succeed, in which case the face will not be suitable for face recognition.
+
+ If not finished, then null will be returned.
+ If face id is invalid or cannot be found (perhaps because it was already converted by
+ a previous polling call), then an exception of type Exception will be thrown.
+
+ You must discard the returned face manually, unless it is to be added to subject templates.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>faceId <code>long</code></dt>
+<dd>An id to the face in background processing. Valid number must be less than -1.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>a FBFace object containing the processed face, very likely suitable for recognition;
+         otherwise, null is returned if still waiting.</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="trackFaceInImage(byte[], int, int, int, ArrayList<FBFace>)">trackFaceInImage</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static trackFaceInImage(byte[], int, int, int, ArrayList<FBFace>)</code>
+<p>Detect faces in an image in a reduced fashion to speed up detection for anti-spoofing purposes.
+ This variant of the face detection calls returns only face attributes, such as pose estimates
+ and eye and mouth state, such as whether eyes are open or whether there is a smile. No template
+ is ever generated, hence no face can be found that is suitable for recognition.
+
+ This call uses face landmarks from a previous frame (stored internally) to track possibly multiple
+ faces in a video stream. If a detected face new landmark coordinates fall outside acceptable
+ track quality threshold, full face detection is rerun. Special eye detection and template
+ extraction is removed from the pipeline. All this accomplishes minimal processing
+ per frame, resulting in optimal frame rate, just to get the face attributes.
+
+ If a face is found that is at least trackable (has the landmark coordinates and pose estimates),
+ then it is returned. All other faces which are rejected are returned in the rejectedFaces array.
+ All faces (except the one returned) are automatically discarded.
+
+ You may discard the returned face manually, but there is no need as no face returned can actually
+ contain a template.
+
+ If you require a face to be added to subject templates or to be used for authentication, you must
+ call other variants of the face detection methods.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>image <code>byte[]</code></dt>
+<dd>An image object contained in byte array in ARGB format with 8 bits per channel,
+                  most likely taken by camera.</dd>
+<dt>width <code>int</code></dt>
+<dd>The number of pixels for a given row of the image. This translates to 4 times
+                  as many bytes in byte array</dd>
+<dt>height <code>int</code></dt>
+<dd>The number of rows in image.</dd>
+<dt>exifRotation <code>int</code></dt>
+<dd>The exif representation of the image rotation (including mirroring)</dd>
+<dt>rejectedFaces <code>java.util.ArrayList&lt;FBFace&gt;</code></dt>
+<dd>a reference to an array to load rejected faces - will not contain the returned face.
+                      pass null if not needed</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>a FBFace object containing the largest face that is at least trackable (may be also suitable
+         for recognition if reduceTemplateExtraction is set to false), if one is found;
+         otherwise, null is returned.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="detectFastFaceInImage(byte[], int, int, int, FBFace, int, boolean, ArrayList<FBFace>)">detectFastFaceInImage</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static detectFastFaceInImage(byte[], int, int, int, FBFace, int, boolean, ArrayList<FBFace>)</code>
+<p>Detect faces in an image in a reduced fashion to speed up detection for anti-spoofing purposes.
+ If a face is found that is at least trackable (has the landmark coordinates and pose estimates),
+ then it is returned. All other faces which are rejected are returned in the rejectedFaces array.
+ All faces (except the one returned) are automatically discarded.
+
+ You must discard the returned face manually if the templateExtractionType is set to 0 or 1,
+ unless it is to be added to subject templates.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>image <code>byte[]</code></dt>
+<dd>An image object contained in byte array in ARGB format with 8 bits per channel,
+                  most likely taken by camera.</dd>
+<dt>width <code>int</code></dt>
+<dd>The number of pixels for a given row of the image. This translates to 4 times
+                  as many bytes in byte array</dd>
+<dt>height <code>int</code></dt>
+<dd>The number of rows in image.</dd>
+<dt>exifRotation <code>int</code></dt>
+<dd>The exif representation of the image rotation (including mirroring)</dd>
+<dt>lastFace <code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>A face that was returned in a previous session to highlight the possible whereabouts of
+                  the next face. If not null, the image will be first cropped and, only if detection fails,
+                  the entire image will then be scanned. If null, the entire image will be scanned.</dd>
+<dt>templateExtractionType <code>int</code></dt>
+<dd>an integer to indicate whether to skip extensive eye detection (using haar)
+                                  and/or template extraction.
+                                  Valid types are:
+                                  0 - perform full haar eye detection & full template extraction
+                                  1 - skip haar & full template extraction
+                                  2 - perform full haar eye detection & skip template extraction
+                                  3 - skip haar & skip template extraction
+                                  If template extraction is excluded, returned faces
+                                  cannot be added to subject templates or used for authentication. Choose this
+                                  setting only if interested in anti-spoofing.</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+<dt>rejectedFaces <code>java.util.ArrayList&lt;FBFace&gt;</code></dt>
+<dd>a reference to an array to load rejected faces - will not contain the returned face.
+                      pass null if not needed</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>a FBFace object containing the largest face that is at least trackable (may be also suitable
+         for recognition if reduceTemplateExtraction is set to false), if one is found;
+         otherwise, null is returned.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="detectFacesInImage(String, boolean)">detectFacesInImage</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static detectFacesInImage(String, boolean)</code>
+<p>Detect faces in an image and return all faces found, regardless if suitable.
+
+ All faces must be explicitly discarded, unless some are to be added to subject templates.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>filePath <code>java.lang.String</code></dt>
+<dd>the path to the image file (jpeg)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace[]</code></dt>
+<dd>an array of all detected faces, sorted by size from largest to smallest.
+         Returns an empty array if no faces are found.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="detectFacesInImage(byte[], int, int, int, boolean)">detectFacesInImage</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static detectFacesInImage(byte[], int, int, int, boolean)</code>
+<p>Detect faces in an image and return all faces found, regardless if suitable.
+ They are sorted from biggest to smallest, with suitable faces first.
+
+ All faces must be explicitly discarded, unless some are to be added to subject templates.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>image <code>byte[]</code></dt>
+<dd>An image object contained in byte array in ARGB format with 8 bits per channel,
+                  most likely taken by camera.</dd>
+<dt>width <code>int</code></dt>
+<dd>The number of pixels for a given row of the image. This translates to 4 times
+                  as many bytes in byte array</dd>
+<dt>height <code>int</code></dt>
+<dd>The number of rows in image.</dd>
+<dt>exifRotation <code>int</code></dt>
+<dd>The exif representation of the image rotation (including mirroring)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace[]</code></dt>
+<dd>an array of all detected faces, sorted by size from largest to smallest.
+         Returns an empty array if no faces are found.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="trackFacesInImage(byte[], int, int, int)">trackFacesInImage</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static trackFacesInImage(byte[], int, int, int)</code>
+<p>Detect faces in an image in a reduced fashion to speed up detection for anti-spoofing purposes.
+ This variant of the face detection calls returns only face attributes, such as pose estimates
+ and eye and mouth state, such as whether eyes are open or whether there is a smile. No template
+ is ever generated, hence no face can be found that is suitable for recognition.
+
+ This call uses face landmarks from a previous frame (stored internally) to track possibly multiple
+ faces in a video stream. If a detected face new landmark coordinates fall outside acceptable
+ track quality threshold, full face detection is rerun. Special eye detection and template
+ extraction is removed from the pipeline. All this accomplishes minimal processing
+ per frame, resulting in optimal frame rate, just to get the face attributes.
+
+ All faces detected are returned. They are sorted from biggest to smallest, with trackable faces first.
+
+ You may discard the returned face manually, but there is no need as no face returned can actually
+ contain a template.
+
+ If you require a face to be added to subject templates or to be used for authentication, you must
+ call other variants of the face detection methods.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>image <code>byte[]</code></dt>
+<dd>An image object contained in byte array in ARGB format with 8 bits per channel,
+                  most likely taken by camera.</dd>
+<dt>width <code>int</code></dt>
+<dd>The number of pixels for a given row of the image. This translates to 4 times
+                  as many bytes in byte array</dd>
+<dt>height <code>int</code></dt>
+<dd>The number of rows in image.</dd>
+<dt>exifRotation <code>int</code></dt>
+<dd>The exif representation of the image rotation (including mirroring)</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace[]</code></dt>
+<dd>an array of all detected faces, sorted by size from largest to smallest.
+         Returns an empty array if no faces are found.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="addFace(String, byte[], int, int, int, boolean)">addFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static addFace(String, byte[], int, int, int, boolean)</code>
+<p>Add a face to the enrollment templates for a given subject. The largest
+ face detected in the image is used for enrollment.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectId <code>java.lang.String</code></dt>
+<dd>unique identifier string for a subject, obtained from calling
+                  startEnrollment first.</dd>
+<dt>image <code>byte[]</code></dt>
+<dd>An image object contained in byte array in ARGB format with 8 bits per channel,
+                  most likely taken by camera.</dd>
+<dt>width <code>int</code></dt>
+<dd>The number of pixels for a given row of the image. This translates to 4 times
+                  as many bytes in byte array</dd>
+<dt>height <code>int</code></dt>
+<dd>The number of rows in image.</dd>
+<dt>exifRotation <code>int</code></dt>
+<dd>The exif representation of the image rotation (including mirroring)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>boolean</code></dt>
+<dd>a boolean indicating acceptance of face for enrollment.
+         If true, face was accepted and enrolled, false otherwise.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="addFace(String, String, boolean)">addFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static addFace(String, String, boolean)</code>
+<p>Add a face to the enrollment templates for a given subject, using a temporary file to pass the image.
+ The largest face detected in the image is used for enrollment.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectId <code>java.lang.String</code></dt>
+<dd>unique identifier string for a subject, obtained from calling
+                  startEnrollment first.</dd>
+<dt>filePath <code>java.lang.String</code></dt>
+<dd>the path to the image file (jpeg)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>boolean</code></dt>
+<dd>a boolean indicating acceptance of face for enrollment.
+         If true, face was accepted and enrolled, false otherwise.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="addFace(String, FBFace)">addFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static addFace(String, FBFace)</code>
+<p>Add a face to the enrollment templates for a given subject, using an acceptable FBFace object,
+ previously obtained from detection. This object must not have been previously destroyed
+ using discardFace() call.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectId <code>java.lang.String</code></dt>
+<dd>unique identifier string for a subject, obtained from calling
+                  startEnrollment first.</dd>
+<dt>face <code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>a face valid for recognition, previously returned using detection.
+                  This object must not have been previously destroyed, otherwise
+                  exception will be thrown.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>boolean</code></dt>
+<dd>a boolean indicating acceptance of face for enrollment.
+         If true, face was accepted and enrolled, false otherwise.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="authenticateFace(String, byte[], int, int, int, boolean)">authenticateFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static authenticateFace(String, byte[], int, int, int, boolean)</code>
+<p>Authenticate face against enrollment templates for a given subject. The
+ largest detected face in the image will be selected for comparison.
+ Results indicate pass/fail decision and confidence measure of decision.
+ Optionally, if smile detection is enabled, results contain a smile decision
+ with confidence.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectId <code>java.lang.String</code></dt>
+<dd>unique identifier string for a subject, obtained from calling
+            startEnrollment first.</dd>
+<dt>image <code>byte[]</code></dt>
+<dd>An image object contained in byte array in ARGB format with 8 bits per channel,
+            most likely taken by camera.</dd>
+<dt>width <code>int</code></dt>
+<dd>The number of pixels for a given row of the image. This translates to 4 times
+            as many bytes in byte array</dd>
+<dt>height <code>int</code></dt>
+<dd>The number of rows in image.</dd>
+<dt>exifRotation <code>int</code></dt>
+<dd>The exif representation of the image rotation (including mirroring)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code><a href="com.appliedrec.detreclib.authentication.FaceAuthenticationResults.html">com.appliedrec.detreclib.authentication.FaceAuthenticationResults</a></code></dt>
+<dd>An object of type FaceAuthenticationResults, loaded with results
+            of authentication, and a confidence on that decision.
+            Confidence score has a range of 0.5 to 1.0 for either decision.
+            A confidence score of 0.5 means that the decision was on the cusp.
+            A confidence score of 1.0 or close to it means it is a strong
+            decision.
+            For smile, confidence ranges from 0.0 to greater than 50.0</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="authenticateFace(String, String, boolean)">authenticateFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static authenticateFace(String, String, boolean)</code>
+<p>Authenticate face against enrollment templates for a given subject. The
+ largest detected face in the image will be selected for comparison.
+ Results indicate pass/fail decision and confidence measure of decision.
+ Optionally, if smile detection is enabled, results contain a smile decision
+ with confidence.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectId <code>java.lang.String</code></dt>
+<dd>unique identifier string for a subject, obtained from calling
+            startEnrollment first.</dd>
+<dt>filePath <code>java.lang.String</code></dt>
+<dd>the path to the image file (jpeg)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code><a href="com.appliedrec.detreclib.authentication.FaceAuthenticationResults.html">com.appliedrec.detreclib.authentication.FaceAuthenticationResults</a></code></dt>
+<dd>An object of type FaceAuthenticationResults, loaded with results
+            of authentication, and a confidence on that decision.
+            Confidence score has a range of 0.5 to 1.0 for either decision.
+            A confidence score of 0.5 means that the decision was on the cusp.
+            A confidence score of 1.0 or close to it means it is a strong
+            decision.
+            For smile, confidence ranges from 0.0 to greater than 50.0</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="authenticateFace(String, FBFace)">authenticateFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static authenticateFace(String, FBFace)</code>
+<p>Authenticate face against enrollment templates for a given subject, using a face
+ previously obtained from detection.
+ Results indicate pass/fail decision and confidence measure of decision.
+ Optionally, if smile detection is enabled, results contain a smile decision
+ with confidence.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectId <code>java.lang.String</code></dt>
+<dd>unique identifier string for a subject, obtained from calling
+            startEnrollment first.</dd>
+<dt>face <code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>an FBFace object containing a face suitable for recognition obtained
+            by calling detection. *** This object must be discarded manually after use.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code><a href="com.appliedrec.detreclib.authentication.FaceAuthenticationResults.html">com.appliedrec.detreclib.authentication.FaceAuthenticationResults</a></code></dt>
+<dd>An object of type FaceAuthenticationResults, loaded with results
+            of authentication, and a confidence on that decision.
+            Confidence score has a range of 0.5 to 1.0 for either decision.
+            A confidence score of 0.5 means that the decision was on the cusp.
+            A confidence score of 1.0 or close to it means it is a strong
+            decision.
+            For smile, confidence ranges from 0.0 to greater than 50.0</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="authenticateFace(String[], String, boolean)">authenticateFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static authenticateFace(String[], String, boolean)</code>
+<p>Authenticate face against enrollment templates for a list of given subjects,
+ using a temporary file to pass the image.
+ The largest detected face in the image will be selected for comparison.
+ Results indicate pass/fail decision and confidence measure of decision.
+ Optionally, if smile detection is enabled, results contain a smile decision
+ with confidence.
+
+ The returned list of results is always the size of the subject list;
+ however, results are sorted by
+   1) authenticated subjects first
+   2) confidence value - highest first</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectIds <code>java.lang.String[]</code></dt>
+<dd>an array of unique identifier strings for subjects, obtained from calling
+            startEnrollment first.</dd>
+<dt>filePath <code>java.lang.String</code></dt>
+<dd>the path to the image file (jpeg)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code><a href="com.appliedrec.detreclib.authentication.FaceAuthenticationResults.html">com.appliedrec.detreclib.authentication.FaceAuthenticationResults[]</a></code></dt>
+<dd>An array of objects of type FaceAuthenticationResults, loaded with results
+            of authentication, and a confidence on that decision.
+            Confidence score has a range of 0.5 to 1.0 for either decision.
+            A confidence score of 0.5 means that the decision was on the cusp.
+            A confidence score of 1.0 or close to it means it is a strong
+            decision.
+            For smile, confidence ranges from 0.0 to greater than 50.0
+            The array is sorted by authentication results and confidence values
+
+            null is returned if there is no suitable face found for authentication</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="authenticateFace(String[], byte[], int, int, int, boolean)">authenticateFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static authenticateFace(String[], byte[], int, int, int, boolean)</code>
+<p>Authenticate face against enrollment templates for a list of given subjects,
+ using byte array to store image.
+ The largest detected face in the image will be selected for comparison.
+ Results indicate pass/fail decision and confidence measure of decision.
+ Optionally, if smile detection is enabled, results contain a smile decision
+ with confidence.
+
+ The returned list of results is always the size of the subject list;
+ however, results are sorted by
+   1) authenticated subjects first
+   2) confidence value - highest first</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectIds <code>java.lang.String[]</code></dt>
+<dd>an array of unique identifier strings for subjects, obtained from calling
+            startEnrollment first.</dd>
+<dt>image <code>byte[]</code></dt>
+<dd>An image object contained in byte array in ARGB format with 8 bits per channel,
+            most likely taken by camera.</dd>
+<dt>width <code>int</code></dt>
+<dd>The number of pixels for a given row of the image. This translates to 4 times
+            as many bytes in byte array</dd>
+<dt>height <code>int</code></dt>
+<dd>The number of rows in image.</dd>
+<dt>exifRotation <code>int</code></dt>
+<dd>The exif representation of the image rotation (including mirroring)</dd>
+<dt>antiSpoofing <code>boolean</code></dt>
+<dd>a flag indicating whether pose compensation should be applied to detected face.
+                     If false, pose compensation is applied; if true, no pose correction is applied.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code><a href="com.appliedrec.detreclib.authentication.FaceAuthenticationResults.html">com.appliedrec.detreclib.authentication.FaceAuthenticationResults[]</a></code></dt>
+<dd>An array of objects of type FaceAuthenticationResults, loaded with results
+            of authentication, and a confidence on that decision.
+            Confidence score has a range of 0.5 to 1.0 for either decision.
+            A confidence score of 0.5 means that the decision was on the cusp.
+            A confidence score of 1.0 or close to it means it is a strong
+            decision.
+            For smile, confidence ranges from 0.0 to greater than 50.0
+            The array is sorted by authentication results and confidence values
+
+            null is returned if there is no suitable face found for authentication</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="authenticateFace(String[], FBFace)">authenticateFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static authenticateFace(String[], FBFace)</code>
+<p>Authenticate face against enrollment templates for a list of given subjects,
+ using a FBFace object previously obtained through detection.
+ Results indicate pass/fail decision and confidence measure of decision.
+ Optionally, if smile detection is enabled, results contain a smile decision
+ with confidence.
+
+ The returned list of results is always the size of the subject list;
+ however, results are sorted by
+   1) authenticated subjects first
+   2) confidence value - highest first</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectIds <code>java.lang.String[]</code></dt>
+<dd>an array of unique identifier strings for subjects, obtained from calling
+            startEnrollment first.</dd>
+<dt>face <code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>an FBFace object containing a face suitable for recognition obtained
+            by calling detection. *** This object must be discarded manually after use.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code><a href="com.appliedrec.detreclib.authentication.FaceAuthenticationResults.html">com.appliedrec.detreclib.authentication.FaceAuthenticationResults[]</a></code></dt>
+<dd>An array of objects of type FaceAuthenticationResults, loaded with results
+            of authentication, and a confidence on that decision.
+            Confidence score has a range of 0.5 to 1.0 for either decision.
+            A confidence score of 0.5 means that the decision was on the cusp.
+            A confidence score of 1.0 or close to it means it is a strong
+            decision.
+            For smile, confidence ranges from 0.0 to greater than 50.0
+            The array is sorted by authentication results and confidence values
+
+            null is returned if there is no suitable face found for authentication</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="discardFace(FBFace)">discardFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static discardFace(FBFace)</code>
+<p>Discard face obtained from detection. *** All valid faces returned from detection must
+ either be added to subject (and not discarded), or discarded, regardless if they are
+ used for authentication.
+
+ The same face may be discarded multiple times - it will log warning but will not
+ crash or throw exception.
+
+ Passing null faces or faces without valid id is accepted - will log warning.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>face <code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dd>a face valid for recognition, previously returned using detection</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="discardFaces(FBFace[])">discardFaces</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static discardFaces(FBFace[])</code>
+<p>Discard face array obtained from detection. *** All valid faces returned from detection must
+ either be added to subject (and not discarded), or discarded, regardless if they are
+ used for authentication.
+
+ The same face may be discarded multiple times - it will log warning but will not
+ crash or throw exception.
+
+ Passing null faces or faces without valid id is accepted - might log warning.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>faces <code>com.appliedrec.detreclib.detection.FBFace[]</code></dt>
+<dd>an array of faces, previously returned using detection</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="numberOfEnrolledFaces(String)">numberOfEnrolledFaces</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static numberOfEnrolledFaces(String)</code>
+<p>Obtains current number of enrolled faces for a given subject.
+ Currently, this method is not implemented and will return -1.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectId <code>java.lang.String</code></dt>
+<dd>unique identifier string for a subject, obtained from calling
+            startEnrollment first.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>int</code></dt>
+<dd>an integer indicating number of currently
+         enrolled face templates for the given subject.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="getEnrolledSubjects()">getEnrolledSubjects</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static getEnrolledSubjects()</code>
+<p>Returns array of all subject ids currently registered in the DB.</p>
+<h4>Returns</h4>
+<dl>
+<dt><code>java.lang.String[]</code></dt>
+<dd>an array of strings for each recorded user in DB.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="getRegisteredFacesForSubject(String)">getRegisteredFacesForSubject</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static getRegisteredFacesForSubject(String)</code>
+<p>Returns array of all face registered for a given subject.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectId <code>java.lang.String</code></dt>
+<dd>a unique identifier string for subject.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.detreclib.detection.FBFace[]</code></dt>
+<dd>an array of FBFace objects for each registered face for subject id in DB.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="deleteSubjects(String[])">deleteSubjects</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static deleteSubjects(String[])</code>
+<p>Delete all subject ids passed in the array.
+ If subject id is not found, an error will be thrown.
+ All associated faces with the subject id are also automatically deleted.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>subjectIds <code>java.lang.String[]</code></dt>
+<dd>an array of unique identifier strings for each subject to be deleted.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.io.FileNotFoundException</code></dt>
+<dd>if the resource files cannot be found</dd>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.io.IOException</code></dt>
+<dd>if there are stream exceptions</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Exception</code></dt>
+<dd>if the detection process fails somewhere in general</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="setSecurityLevel(FaceAuthenticationSecurityLevel)">setSecurityLevel</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static setSecurityLevel(FaceAuthenticationSecurityLevel)</code>
+<p>Set the security level as an integer enum, and save to DB. The security level
+ is global across all enrolled subjects and is persistent across sessions, with
+ a default value of Normal.
+
+ The higher the security, the more difficult it is to authenticate the
+ enrolled user, but also it is less likely to let in an imposter.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>securityLevel <code><a href="com.appliedrec.detreclib.authentication.FaceAuthenticationSecurityLevel.html">com.appliedrec.detreclib.authentication.FaceAuthenticationSecurityLevel</a></code></dt>
+<dd>An integer enum representing the security level.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="getSecurityLevel()">getSecurityLevel</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static getSecurityLevel()</code>
+<p>Get the saved security level as an integer enum, which is global across
+ all enrolled subjects. The default starting value, unless changed,
+ is Normal.</p>
+<h4>Returns</h4>
+<dl>
+<dt><code><a href="com.appliedrec.detreclib.authentication.FaceAuthenticationSecurityLevel.html">com.appliedrec.detreclib.authentication.FaceAuthenticationSecurityLevel</a></code></dt>
+<dd>A securityLevel enum, which will be set with
+            a result value representing the security level.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>android.database.sqlite.SQLiteException</code></dt>
+<dd>if there are problems with the JNI sqlite database</dd>
+<dt><code>java.lang.OutOfMemoryError</code></dt>
+<dd>if cannot allocate memory</dd>
+<dt><code>java.lang.Error</code></dt>
+<dd>all other un-checked issues</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="outputDebugImagesForFace(FBFace, int, byte[], int, int, int, String, String)">outputDebugImagesForFace</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public static outputDebugImagesForFace(FBFace, int, byte[], int, int, int, String, String)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>face <code>com.appliedrec.detreclib.detection.FBFace</code></dt>
+<dt>faceWidth <code>int</code></dt>
+<dt>image <code>byte[]</code></dt>
+<dt>width <code>int</code></dt>
+<dt>height <code>int</code></dt>
+<dt>exifRotation <code>int</code></dt>
+<dt>path <code>java.lang.String</code></dt>
+<dt>basename <code>java.lang.String</code></dt>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.lang.Error</code></dt>
+</dl>
+
+</dd>
+<dt><h3 class="deprecated"><a name="isClientAuthenticated()">isClientAuthenticated</a></h3><p>Introduced in version </p><h4 class="deprecation">Deprecated in 1.8.1</h4></dt>
+<dd>
+<code>public static isClientAuthenticated()</code>
+<p>Indicates whether the client app has authenticated for the use of the Ver-ID API.</p>
+<h4>Returns</h4>
+<dl>
+<dt><code>boolean</code></dt>
+<dd>true if the client has authenticated.</dd>
+</dl>
+
+</dd>
+<dt><h3 class="deprecated"><a name="isClientRequiredToAuthenticate()">isClientRequiredToAuthenticate</a></h3><p>Introduced in version </p><h4 class="deprecation">Deprecated in 1.8.1</h4></dt>
+<dd>
+<code>public static isClientRequiredToAuthenticate()</code>
+<p>Indicates whether the client app has to authenticate to use the Ver-ID API.</p>
+<h4>Returns</h4>
+<dl>
+<dt><code>boolean</code></dt>
+<dd>true if the client is required to authenticate.</dd>
+</dl>
+
+</dd>
+<dt><h3 class="deprecated"><a name="authenticateClientWithAPISecret(String)">authenticateClientWithAPISecret</a></h3><p>Introduced in version </p><h4 class="deprecation">Deprecated in 1.8.1</h4></dt>
+<dd>
+<code>public static authenticateClientWithAPISecret(String)</code>
+<p>Authenticate the client to use the Ver-ID API. This call connects to a server. Always call on a background thread.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>secret <code>java.lang.String</code></dt>
+<dd>API secret to use for authentication.</dd>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>boolean</code></dt>
+<dd>true if the client has been authenticated.</dd>
+</dl>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.lang.Exception</code></dt>
+</dl>
+
+</dd>
+</dl></section>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ver-ID API Documentation</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<aside><h2>Classes</h2><ul><li><a href="com.appliedrec.ver_id.ui.VerIDFragment.html">VerIDFragment</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDTheme.html">VerIDTheme</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDTheme.ColourScheme.html">VerIDTheme.ColourScheme</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDActivity.html">VerIDActivity</a></li><li><a href="com.appliedrec.ver_id.VerID.html">VerID</a></li><li><a href="com.appliedrec.ver_id.util.FaceUtil.html">FaceUtil</a></li><li><a href="com.appliedrec.ver_id.VerIDLivenessDetectionIntent.html">VerIDLivenessDetectionIntent</a></li><li><a href="com.appliedrec.ver_id.VerIDRegistrationIntent.html">VerIDRegistrationIntent</a></li><li><a href="com.appliedrec.ver_id.VerIDSessionIntent.html">VerIDSessionIntent</a></li><li><span class="deprecated">LogEntry</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.model.VerIDFace.html">VerIDFace</a></li><li><span class="deprecated">RecognitionFace</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.model.VerIDUser.html">VerIDUser</a></li><li><a href="com.appliedrec.ver_id.UserManager.html">UserManager</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDUserPictureUriLoader.html">VerIDUserPictureUriLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDUsersLoader.html">VerIDUsersLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDRegistrationLoader.html">VerIDRegistrationLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDLoader.html">VerIDLoader</a></li><li><a href="com.appliedrec.ver_id.VerIDAuthenticationIntent.html">VerIDAuthenticationIntent</a></li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.html">VerIDFaceDetectionService</a></li><li><a href="com.appliedrec.ver_id.services.VerIDTAFaceDetectionService.html">VerIDTAFaceDetectionService</a></li><li><a href="com.appliedrec.ver_id.session.VerIDLivenessDetectionSessionSettings.html">VerIDLivenessDetectionSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDAuthenticationSessionSettings.html">VerIDAuthenticationSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionResult.html">VerIDSessionResult</a></li><li><a href="com.appliedrec.ver_id.session.VerIDRegistrationSessionSettings.html">VerIDRegistrationSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionSettings.html">VerIDSessionSettings</a></li></ul><h2>Interfaces</h2><ul><li><a href="com.appliedrec.ver_id.ui.VerIDFragmentDelegate.html">VerIDFragmentDelegate</a></li><li><span class="deprecated">VerID.LogSubmitterListener</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.VerID.LoadCallback.html">VerID.LoadCallback</a></li><li><span class="deprecated">ILogger</span> (deprecated)</li><li><span class="deprecated">ILogSubmitter</span> (deprecated)</li></ul><h2>Enums</h2><ul><li><a href="com.appliedrec.ver_id.VerID.Bearing.html">VerID.Bearing</a></li><li><a href="com.appliedrec.ver_id.VerID.LivenessDetection.html">VerID.LivenessDetection</a></li><li><a href="com.appliedrec.ver_id.VerID.AntiSpoofingMethod.html">VerID.AntiSpoofingMethod</a></li><li><a href="com.appliedrec.ver_id.VerID.SecurityLevel.html">VerID.SecurityLevel</a></li><li><span class="deprecated">ILogger.EventType</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.Axis.html">VerIDFaceDetectionService.Axis</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionResult.Outcome.html">VerIDSessionResult.Outcome</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionSettings.CameraLensFacing.html">VerIDSessionSettings.CameraLensFacing</a></li></ul></aside>
+</body>
+</html>
+<h1>CameraFragment</h1>
+<h4>Package com.appliedrec.shared.ui</h4>
+<code>public class  CameraFragment</code>
+<ul class="ancestry"><li>com.appliedrec.shared.ui.CameraFragment
+<ul class="ancestry"><li>android.app.DialogFragment
+<ul class="ancestry"><li>android.app.Fragment
+<ul class="ancestry"><li>java.lang.Object
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<h2>Implements</h2>
+<ul class="ancestry">
+<li>com.appliedrec.shared.camera.CameraPreviewFrameListener</li>
+</ul>
+<section><h2>Constructor</h2><dl>
+<dt><h3><a name="CameraFragment()">CameraFragment</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public CameraFragment()</code>
+
+</dd>
+</dl></section>
+<section><h2>Methods</h2><dl>
+<dt><h3><a name="onCreateDialog(Bundle)">onCreateDialog</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onCreateDialog(Bundle)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>savedInstanceState <code>android.os.Bundle</code></dt>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>android.app.Dialog</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onAttach(Context)">onAttach</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onAttach(Context)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>context <code>android.content.Context</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onAttach(Activity)">onAttach</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onAttach(Activity)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>activity <code>android.app.Activity</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onCreateView(LayoutInflater, ViewGroup, Bundle)">onCreateView</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onCreateView(LayoutInflater, ViewGroup, Bundle)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>inflater <code>android.view.LayoutInflater</code></dt>
+<dt>container <code>android.view.ViewGroup</code></dt>
+<dt>savedInstanceState <code>android.os.Bundle</code></dt>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>android.view.View</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onResume()">onResume</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onResume()</code>
+
+</dd>
+<dt><h3><a name="onPause()">onPause</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onPause()</code>
+
+</dd>
+<dt><h3><a name="onStop()">onStop</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onStop()</code>
+
+</dd>
+<dt><h3><a name="startCamera()">startCamera</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public final startCamera()</code>
+<p>Start the camera. When the camera starts <code>onCameraStarted()</code> is called and the captured preview frames will start to be passed to the <code>cameraDelegate</code>.</p>
+
+</dd>
+<dt><h3><a name="stopCamera()">stopCamera</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public final stopCamera()</code>
+<p>Stop and release the camera. This method is called automatically in <code>onPause()</code> and <code>onStop()</code>. After this method is called the <code>cameraDelegate</code> will stop receiving the preview frames from the camera.</p>
+
+</dd>
+<dt><h3><a name="getCamera()">getCamera</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public getCamera()</code>
+<h4>Returns</h4>
+<dl>
+<dt><code>com.appliedrec.shared.camera.AndroidCameraBridge</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="takePicture()">takePicture</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public final takePicture()</code>
+<p>Call this method to take a picture. This method must be called between <code>onCameraStarted()</code> and <code>onCameraStopped()</code> or the method will throw an exception.
+
+ After the camera captures a photo the <code>cameraDelegate</code> will receive <code>onJpeg(byte[],int,int,int)</code> call.</p>
+<h4>Throws</h4>
+<dl>
+<dt><code>java.lang.Exception</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onRequestPermissionsResult(int, String[], int[])">onRequestPermissionsResult</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onRequestPermissionsResult(int, String[], int[])</code>
+<h4>Parameters</h4>
+<dl>
+<dt>requestCode <code>int</code></dt>
+<dt>permissions <code>java.lang.String[]</code></dt>
+<dt>grantResults <code>int[]</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onPreviewStateChanged(boolean)">onPreviewStateChanged</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onPreviewStateChanged(boolean)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>isPreviewing <code>boolean</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onPictureTaken(byte[], int, int)">onPictureTaken</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onPictureTaken(byte[], int, int)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>data <code>byte[]</code></dt>
+<dt>format <code>int</code></dt>
+<dt>orientation <code>int</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onPreviewFrame(YuvImage, int)">onPreviewFrame</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onPreviewFrame(YuvImage, int)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>image <code>android.graphics.YuvImage</code></dt>
+<dt>orientation <code>int</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onCameraAcquired(boolean)">onCameraAcquired</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onCameraAcquired(boolean)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>success <code>boolean</code></dt>
+</dl>
+
+</dd>
+<dt><h3><a name="onAutoFocusCompleted(boolean)">onAutoFocusCompleted</a></h3><p>Introduced in version </p></dt>
+<dd>
+<code>public onAutoFocusCompleted(boolean)</code>
+<h4>Parameters</h4>
+<dl>
+<dt>isFocused <code>boolean</code></dt>
+</dl>
+
+</dd>
+</dl></section>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/security">
+        <ListPreference
+            android:entries="@array/security_levels"
+            android:entryValues="@array/security_level_value"
+            android:key="@string/pref_key_security_level"
+            android:summary="%s\nHigher levels lower the false acceptance rate (FAR) at the expense of false rejection rate (FRR)"
+            android:title="@string/security_level" />
+        <ListPreference
+            android:entries="@array/pose_counts"
+            android:entryValues="@array/pose_count_values"
+            android:key="@string/pref_key_required_pose_count"
+            android:summary="%s\nHigher pose count makes authentication more secure at the expense of usability"
+            android:defaultValue="1"
+            android:title="@string/pose_count" />
+    </PreferenceCategory>
+</PreferenceScreen>

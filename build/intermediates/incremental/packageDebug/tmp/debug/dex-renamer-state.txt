@@ -1,0 +1,4 @@
+#Sat Oct 19 14:34:18 PKT 2019
+base.0=G\:\\Ver-ID-Android-Sample-master\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

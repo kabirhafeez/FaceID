@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appliedrec.ver_idsample"
+    android:versionName="4.9.3" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+
+    <application
+        android:name="com.appliedrec.ver_idsample.SampleApplication"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:hardwareAccelerated="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.appliedrec.ver_idsample.LoadingActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.appliedrec.ver_idsample.IntroActivity" />
+        <activity android:name="com.appliedrec.ver_idsample.RegisteredUserActivity" />
+        <activity android:name="com.appliedrec.ver_idsample.SettingsActivity" />
+        <activity android:name="com.appliedrec.ver_idsample.RegistrationImportActivity" />
+
+        <meta-data
+            android:name="com.appliedrec.verid.apiSecret"
+            android:value="6174cf972b7a4bc17e921a24f043778bb1879acc6e88316ac65fdc95d0514df3" />
+
+        <activity
+            android:name="com.appliedrec.ver_id.ui.VerIDAuthenticationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/authentication"
+            android:theme="@style/CameraActivityTheme" />
+        <activity
+            android:name="com.appliedrec.ver_id.ui.VerIDRegistrationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/registration"
+            android:theme="@style/CameraActivityTheme" />
+        <activity
+            android:name="com.appliedrec.ver_id.ui.VerIDLivenessDetectionActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/CameraActivityTheme" />
+        <activity android:name="com.appliedrec.ver_id.ui.TipsActivity" />
+        <activity
+            android:name="com.appliedrec.ver_id.ui.ResultActivity"
+            android:label="@string/success" />
+
+        <service android:name="com.appliedrec.ver_id.services.CameraService" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

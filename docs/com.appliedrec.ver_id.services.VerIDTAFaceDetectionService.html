@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ver-ID API Documentation</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<aside><h2>Classes</h2><ul><li><a href="com.appliedrec.ver_id.ui.VerIDFragment.html">VerIDFragment</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDTheme.html">VerIDTheme</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDTheme.ColourScheme.html">VerIDTheme.ColourScheme</a></li><li><a href="com.appliedrec.ver_id.ui.VerIDActivity.html">VerIDActivity</a></li><li><a href="com.appliedrec.ver_id.VerID.html">VerID</a></li><li><a href="com.appliedrec.ver_id.util.FaceUtil.html">FaceUtil</a></li><li><a href="com.appliedrec.ver_id.VerIDLivenessDetectionIntent.html">VerIDLivenessDetectionIntent</a></li><li><a href="com.appliedrec.ver_id.VerIDRegistrationIntent.html">VerIDRegistrationIntent</a></li><li><a href="com.appliedrec.ver_id.VerIDSessionIntent.html">VerIDSessionIntent</a></li><li><span class="deprecated">LogEntry</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.model.VerIDFace.html">VerIDFace</a></li><li><span class="deprecated">RecognitionFace</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.model.VerIDUser.html">VerIDUser</a></li><li><a href="com.appliedrec.ver_id.UserManager.html">UserManager</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDUserPictureUriLoader.html">VerIDUserPictureUriLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDUsersLoader.html">VerIDUsersLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDRegistrationLoader.html">VerIDRegistrationLoader</a></li><li><a href="com.appliedrec.ver_id.loaders.VerIDLoader.html">VerIDLoader</a></li><li><a href="com.appliedrec.ver_id.VerIDAuthenticationIntent.html">VerIDAuthenticationIntent</a></li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.html">VerIDFaceDetectionService</a></li><li><a href="com.appliedrec.ver_id.services.VerIDTAFaceDetectionService.html">VerIDTAFaceDetectionService</a></li><li><a href="com.appliedrec.ver_id.session.VerIDLivenessDetectionSessionSettings.html">VerIDLivenessDetectionSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDAuthenticationSessionSettings.html">VerIDAuthenticationSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionResult.html">VerIDSessionResult</a></li><li><a href="com.appliedrec.ver_id.session.VerIDRegistrationSessionSettings.html">VerIDRegistrationSessionSettings</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionSettings.html">VerIDSessionSettings</a></li></ul><h2>Interfaces</h2><ul><li><a href="com.appliedrec.ver_id.ui.VerIDFragmentDelegate.html">VerIDFragmentDelegate</a></li><li><span class="deprecated">VerID.LogSubmitterListener</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.VerID.LoadCallback.html">VerID.LoadCallback</a></li><li><span class="deprecated">ILogger</span> (deprecated)</li><li><span class="deprecated">ILogSubmitter</span> (deprecated)</li></ul><h2>Enums</h2><ul><li><a href="com.appliedrec.ver_id.VerID.Bearing.html">VerID.Bearing</a></li><li><a href="com.appliedrec.ver_id.VerID.LivenessDetection.html">VerID.LivenessDetection</a></li><li><a href="com.appliedrec.ver_id.VerID.AntiSpoofingMethod.html">VerID.AntiSpoofingMethod</a></li><li><a href="com.appliedrec.ver_id.VerID.SecurityLevel.html">VerID.SecurityLevel</a></li><li><span class="deprecated">ILogger.EventType</span> (deprecated)</li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.Axis.html">VerIDFaceDetectionService.Axis</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionResult.Outcome.html">VerIDSessionResult.Outcome</a></li><li><a href="com.appliedrec.ver_id.session.VerIDSessionSettings.CameraLensFacing.html">VerIDSessionSettings.CameraLensFacing</a></li></ul></aside>
+</body>
+</html>
+<h1>VerIDTAFaceDetectionService</h1>
+<section>
+<h4>Face detection service optimised for time and attendance devices with a camera mounted to a fixed location.</h4>
+</section>
+<h4>Package com.appliedrec.ver_id.services</h4>
+<code>public class  VerIDTAFaceDetectionService</code>
+<ul class="ancestry"><li>com.appliedrec.ver_id.services.VerIDTAFaceDetectionService
+<ul class="ancestry"><li>com.appliedrec.ver_id.services.VerIDFaceDetectionService
+<ul class="ancestry"><li>java.lang.Object
+</li></ul>
+</li></ul>
+</li></ul>
+<section><h2>Constructors</h2><dl>
+<dt><h3><a name="VerIDTAFaceDetectionService(VerIDSessionSettings)">VerIDTAFaceDetectionService</a></h3><p>Introduced in version 4.7.0</p></dt>
+<dd>
+<code>public VerIDTAFaceDetectionService(VerIDSessionSettings)</code>
+<p>Class constructor</p>
+<h4>Parameters</h4>
+<dl>
+<dt>settings <code>com.appliedrec.ver_id.session.VerIDSessionSettings</code></dt>
+<dd>Session settings</dd>
+</dl>
+
+</dd>
+<dt><h3><a name="VerIDTAFaceDetectionService(VerIDSessionSettings, long, int, float, float, float, float)">VerIDTAFaceDetectionService</a></h3><p>Introduced in version 4.7.0</p></dt>
+<dd>
+<code>public VerIDTAFaceDetectionService(VerIDSessionSettings, long, int, float, float, float, float)</code>
+<p>Class constructor</p>
+<h4>Parameters</h4>
+<dl>
+<dt>settings <code>com.appliedrec.ver_id.session.VerIDSessionSettings</code></dt>
+<dd>Session settings</dd>
+<dt>pauseTime <code>long</code></dt>
+<dd>Pause time in milliseconds</dd>
+<dt>faceBufferSize <code>int</code></dt>
+<dd>Size of the face buffer</dd>
+<dt>yawThreshold <code>float</code></dt>
+<dd>Threshold angle for the yaw axis</dd>
+<dt>pitchThreshold <code>float</code></dt>
+<dd>Threshold angle for the pitch axis</dd>
+<dt>yawThresholdTolerance <code>float</code></dt>
+<dd>Threshold tolerance angle for the yaw axis</dd>
+<dt>pitchThresholdTolerance <code>float</code></dt>
+<dd>Threshold tolerance angle for the pitch axis</dd>
+</dl>
+<h4>See also</h4><ul class="seeAlso"><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.html#getPauseTime()">com.appliedrec.ver_id.services.VerIDFaceDetectionService.html#getPauseTime()</a></li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.html#getFaceBufferSize()">com.appliedrec.ver_id.services.VerIDFaceDetectionService.html#getFaceBufferSize()</a></li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.html#getThresholdAngleForAxis(Axis)">com.appliedrec.ver_id.services.VerIDFaceDetectionService.html#getThresholdAngleForAxis(Axis)</a></li><li><a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.html#getThresholdAngleToleranceForAxis(Axis)">com.appliedrec.ver_id.services.VerIDFaceDetectionService.html#getThresholdAngleToleranceForAxis(Axis)</a></li></ul>
+</dd>
+</dl></section>
+<section><h2>Methods</h2><dl>
+<dt><h3><a name="isFaceWithBoundsFixedInImageSize(RectF, Size)">isFaceWithBoundsFixedInImageSize</a></h3><p>Introduced in version 4.7.0</p></dt>
+<dd>
+<code>public isFaceWithBoundsFixedInImageSize(RectF, Size)</code>
+<p>This implementation considers the face to be fixed if it fits within the bounds of the image and its width is greater than a quarter of the image's shorter side.
+ See <a href="com.appliedrec.ver_id.services.VerIDFaceDetectionService.html#isFaceWithBoundsFixedInImageSize(RectF, Size)">super class</a> for details.</p>
+<h4>Parameters</h4>
+<dl>
+<dt>faceBounds <code>android.graphics.RectF</code></dt>
+<dt>size <code>com.appliedrec.shared.Size</code></dt>
+</dl>
+<h4>Returns</h4>
+<dl>
+<dt><code>boolean</code></dt>
+</dl>
+
+</dd>
+</dl></section>

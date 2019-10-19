@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+    maven { url 'https://dev.ver-id.com/artifactory/gradle-release' }
+    google()
+}
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        applicationId "com.appliedrec.ver_idsample"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionName = "4.9.3"
+        archivesBaseName = "ver-id-sample"
+        renderscriptTargetApi 14
+        renderscriptSupportModeEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    sourceSets {
+        main.java.srcDirs += ['src/sample/java']
+    }
+}
+
+dependencies {
+    implementation 'com.appliedrec:verid:4.9.3'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.google.code.gson:gson:2.8.5'
+}
